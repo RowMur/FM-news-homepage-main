@@ -12,7 +12,7 @@
       href="./assets/images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="index.css" />
-
+    <script src="index.js"></script>
     <title>Frontend Mentor | News homepage</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -26,23 +26,48 @@
       }
     </style>
   </head>
-  <body>
+  <body id="body">
     <header>
       <img src="./assets/images/logo.svg" alt="Logo" />
-      <nav>
+      <nav class="desktopNav">
         <div class="navOption">Home</div>
         <div class="navOption">New</div>
         <div class="navOption">Popular</div>
         <div class="navOption">Trending</div>
         <div class="navOption">Categories</div>
       </nav>
+      <img
+        src="./assets/images/icon-menu.svg"
+        alt="Menu"
+        class="mobileNav"
+        onclick="openNav()"
+      />
+      <div id="sidebarNav" class="sidebarNav">
+        <div>
+          <img
+            src="./assets/images/icon-menu-close.svg"
+            alt="Close Button"
+            onclick="closeNav()"
+          />
+        </div>
+        <div>Home</div>
+        <div>New</div>
+        <div>Popular</div>
+        <div>Trending</div>
+        <div>Categories</div>
+      </div>
     </header>
 
     <main>
       <img
+        src="./assets/images/image-web-3-mobile.jpg"
+        alt="Web 3.0 Image"
+        class="web3MobileImg"
+      />
+      <img
         src="./assets/images/image-web-3-desktop.jpg"
         alt="Web 3.0 Image"
-        class="web3Img"
+        class="web3DesktopImg"
       />
       <p class="web3Title">The Bright Future of Web 3.0?</p>
       <div class="web3Caption">
@@ -55,25 +80,27 @@
       </div>
       <div class="newWrapper">
         <p class="newTitle">New</p>
-        <div class="newArticle">
-          <p class="newHeader">Hydrogen VS Electric Cars</p>
-          <p class="newContent">
-            Will hydrogen-fueled cars ever catch up to EVs?
-          </p>
-        </div>
-        <div class="newArticle">
-          <p class="newHeader">The Downsides of AI Artistry</p>
-          <p class="newContent">
-            What are the possible adverse effects of on-demand AI image
-            generation?
-          </p>
-        </div>
-        <div class="newArticle" style="border-bottom: none">
-          <p class="newHeader">Is VC Funding Drying Up?</p>
-          <p class="newContent">
-            Private funding by VC firms is down 50% YOY. We take a look at what
-            that means.
-          </p>
+        <div class="newArticles">
+          <div class="newArticle">
+            <p class="newHeader">Hydrogen VS Electric Cars</p>
+            <p class="newContent">
+              Will hydrogen-fueled cars ever catch up to EVs?
+            </p>
+          </div>
+          <div class="newArticle">
+            <p class="newHeader">The Downsides of AI Artistry</p>
+            <p class="newContent">
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+          </div>
+          <div class="newArticle" style="border-bottom: none">
+            <p class="newHeader">Is VC Funding Drying Up?</p>
+            <p class="newContent">
+              Private funding by VC firms is down 50% YOY. We take a look at
+              what that means.
+            </p>
+          </div>
         </div>
       </div>
       <div class="trendingWrapper">
