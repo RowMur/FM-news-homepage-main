@@ -22,6 +22,8 @@
 
 body {
   transition: 0.5s;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .attribution {
